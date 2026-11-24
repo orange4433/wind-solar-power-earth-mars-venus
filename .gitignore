@@ -1,0 +1,16 @@
+# Keep this public release limited to source code and its documentation.
+*
+!*/
+!*.py
+!*.ipynb
+!/README.md
+!/requirements.txt
+!/CODE_MANIFEST.csv
+!/.gitignore
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/
+paper/
+manuscripts/
+outputs/

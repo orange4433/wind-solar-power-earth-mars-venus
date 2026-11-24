@@ -1,0 +1,16 @@
+numpy>=2
+pandas
+scipy
+matplotlib
+xarray
+h5netcdf
+h5py
+Pillow
+requests
+beautifulsoup4
+tqdm
+nbformat
+openpyxl
+cartopy
+shapely>=2
+jupyter
