@@ -8,13 +8,18 @@ This public repository is a **code-only release**. The unpublished manuscript, m
 
 | Directory | Analysis |
 | --- | --- |
-| `火星/` | InSight telemetry collection and solar reconstruction, MCD-based wind generation, and mission-load digitization |
-| `金星/` | Vega wind scenarios, Akatsuki/Pioneer atmospheric profiles, and photovoltaic models |
-| `地球/` | Generation-data aggregation and wind/solar Kendall correlation mapping |
-| `文章图片/` | Figure-generation code and physical-model audit helpers |
-| `文献验证/Kendall系数复现/code/` | Literature comparison and country-level correlation validation |
+| `mars/` | InSight telemetry collection and solar reconstruction, MCD-based wind generation, and mission-load digitization |
+| `venus/` | Vega wind scenarios, Akatsuki/Pioneer atmospheric profiles, and photovoltaic models |
+| `earth/electricity_maps/` | Generation-data aggregation and wind/solar Kendall correlation mapping |
+| `figures/figure_1_mars/` | Figure 1: Mars |
+| `figures/figure_2_venus/` | Figure 2: Venus |
+| `figures/figure_3_earth/` | Figure 3: Earth |
+| `figures/model_validation/` | Physical-model audit helpers |
+| `literature_validation/kendall_reproduction/code/` | Literature comparison and country-level correlation validation |
 
-Source comments and this documentation are in English. Original relative paths and data-column names are retained so that the scripts remain compatible with the research working archive.
+Repository directories, code filenames, source comments and this documentation are in English. Code references and cross-directory imports use the same English paths. External data basenames and data-column names retain their original spelling; place independently supplied inputs under the corresponding English directories.
+
+The figure launcher is `figures/redraw_all_figures.py`. Its targets are `model_validation/pv_efficiency_audit.py`, `figure_1_mars/plot_figure_1_mars.py`, `figure_2_venus/plot_figure_2_venus_context.py` and `figure_3_earth/plot_figure_3_earth_globes.py`, resolved relative to the launcher.
 
 ## Environment and external inputs
 
@@ -29,6 +34,6 @@ The figure redraw launcher and model notebooks are research entry points, not st
 
 ## Validation and attribution
 
-All included Python files and notebook code cells were syntax-checked. The public notebooks have no saved outputs. Full scientific analyses have not been rerun from this data-free release.
+After the English-path migration, all 23 Python files and 18 notebook code cells were syntax-checked. The redraw launcher was exercised with its data-dependent jobs intercepted, confirming all four target scripts exist and resolve correctly. An AST comparison verified that executable changes were limited to path strings and the launcher's English progress message. Both public notebooks remain byte-identical and have no saved outputs. Full scientific analyses have not been rerun from this data-free release.
 
 Mission data and external models retain their original source terms. The separate [Hartwick Mars-Wind-Energy project](https://github.com/vhartwick/Mars-Wind-Energy) is third-party work and is not included as original code here.

@@ -14,8 +14,8 @@ import matplotlib.pyplot as plt
 HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parents[1]
 OUT = HERE / '数据核查'
-RAW = PROJECT / '金星/akatsuki_pioneer_profiles/data/raw'
-VEGA = PROJECT / '金星/vega_wind_power'
+RAW = PROJECT / 'venus/akatsuki_pioneer_profiles/data/raw'
+VEGA = PROJECT / 'venus/vega_wind_power'
 sys.path.insert(0, str(VEGA))
 sys.path.insert(0, str(HERE.parent))
 from read_vega_data import read_table

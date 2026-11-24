@@ -6,7 +6,7 @@ import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parents[1]
-SOLAR = PROJECT/'金星'/'venus_solar_power'
+SOLAR = PROJECT/'venus'/'venus_solar_power'
 
 # ===== Device reference: Rocket Lab / SolAero ZTJ datasheet =====
 ETA_REF = 0.295

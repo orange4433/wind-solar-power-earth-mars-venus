@@ -16,7 +16,7 @@ from PIL import Image
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE.parent))
-sys.path.insert(0, str(HERE.parent/'模型核查'))
+sys.path.insert(0, str(HERE.parent/'model_validation'))
 from figure_style import setup, SOLAR
 from pv_efficiency_audit import venus_reference
 from venus_profile_audit import load_audit_data
@@ -208,7 +208,7 @@ def main():
     _, profiles, locations, _, _ = load_audit_data()
     winds = pd.read_csv(HERE/'金星-2.csv')
     flux = pd.read_csv(HERE/'金星-3.csv')
-    raw_flux = pd.read_csv(HERE.parents[1]/'金星/venus_solar_power/data/lsfr_solar_flux.csv', header=None)
+    raw_flux = pd.read_csv(HERE.parents[1]/'venus/venus_solar_power/data/lsfr_solar_flux.csv', header=None)
     for series, column in [('Visible downward flux', 3), ('Combined downward flux', 6),
                            ('Narrowband downward flux', 9)]:
         expected = set(map(tuple, raw_flux[[2, column]].dropna().round(6).to_numpy()))

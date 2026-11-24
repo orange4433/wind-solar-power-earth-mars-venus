@@ -25,7 +25,7 @@ import cartopy.crs as ccrs
 from shapely.geometry import shape
 from shapely import make_valid
 
-spec = importlib.util.spec_from_file_location('earth_original', HERE/'绘制图3_地球.py')
+spec = importlib.util.spec_from_file_location('earth_original', HERE/'plot_figure_3_earth.py')
 original = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(original)
 sys.path.insert(0, str(original.MAP_SOURCE))
@@ -235,7 +235,7 @@ def draw_country_legend(fig, trend_ax, handles, labels):
 
 
 def main():
-    protected = [HERE/'绘制图3_地球.py', HERE/'图3_地球_组合.png',
+    protected = [HERE/'plot_figure_3_earth.py', HERE/'图3_地球_组合.png',
                  original.MAP_TOTALS_FILE, HERE/original.DATA_NAME]
     hashes = {p:hashlib.sha256(p.read_bytes()).hexdigest() for p in protected}
     original.setup()

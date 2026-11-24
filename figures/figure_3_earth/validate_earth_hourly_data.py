@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
 HERE = Path(__file__).resolve().parent
-SOURCE = HERE.parents[1] / '地球/electricity maps'
+SOURCE = HERE.parents[1] / 'earth/electricity_maps'
 OUT = HERE / '独立验证'
 sys.path.insert(0, str(SOURCE))
 sys.path.insert(0, str(HERE.parent))
